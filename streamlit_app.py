@@ -48,5 +48,5 @@ streamlit.dataframe(my_data_rows)
 
 # -- Adding a new fruit from user prompt
 my_fruit_add = streamlit.text_input("What fruit would you like to add?", 'Jackfruit')
-my_cur.execute("INSERT INTO PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST VALUES :my_fruit_add")
+# my_cur.execute("INSERT INTO PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST VALUES :my_fruit_add")
 # my_added_row = my_cur.fetchall()
