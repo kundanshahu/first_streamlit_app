@@ -45,3 +45,8 @@ my_cur.execute("SELECT * from PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains : ")
 streamlit.dataframe(my_data_rows)
+
+# -- Adding a new fruit from user prompt
+my_fruit_add = streamlit.text_input("What fruit would you like to add?")
+fruityvice_add_response = requests.put("https://fruityvice.com/api/fruit/" + my_fruit_add)
+streamlit.text(fruityvice_add_response.json())
